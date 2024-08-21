@@ -6,7 +6,7 @@ const agregarFila = () => {
     nuevaFila.innerHTML = `<td>${id}</td>
                            <td><input type="text" class="form-control" id="latitud${id}" value=""></td>
                            <td><input type="text" class="form-control" id="longitud${id}" value=""></td>
-                           <td><input type="text" class="form-control" id="peso${id}" value="1"></td>`;
+                           <td><input type="text" class="form-control" id="peso${id}" value=""></td>`;
 }
   
 const eliminarFila = () => {
