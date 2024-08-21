@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mapa de Calor con Leaflet</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 700px;
+      width: 100%;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    textarea {
+      width: 100%;
+    }
+    
+  </style>
+</head>
+
+<body >
+  <div id="map"></div>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9"></div>
+        <h1>Mapa de Calor con Leaflet</h1>
+        <!--Centrar los botones-->
+        <div class="text-center"> 
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="form-group">
+          <div class="text-center">
+            <button type="button" class="btn btn-primary mr-2" onclick="agregarFila()">Agregar Fila</button>
+            <button type="button" class="btn btn-danger" onclick="eliminarFila()">Eliminar Fila</button>
+            <button onclick="createHeatmap(generarJSON())"  class="btn btn-primary" >Crear Mapa de Calor</button>
+            <button onclick="resetHeatmap()" class="btn btn-primary" >Reiniciar Mapa de Calor</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Hacer que la tabla sea gris-->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <table  class="table" id="tablaprueba">
+          <thead class="thead-dark">
+            <tr>
+              <th>ID</th>
+              <!--Ingresar datos en la tabla-->
+              <th>Latitud</th>
+              <th>Longitud</th>
+              <th>Peso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><input type="text" class="form-control" id="latitud1" value=""></td>
+              <td><input type="text" class="form-control" id="longitud1" value=""></td>
+              <td><input type="text" class="form-control" id="peso1" value=""></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+  <script src="heatmap.js"></script>
+  <script src="impl.js"></script>
+</body>
+</html>
